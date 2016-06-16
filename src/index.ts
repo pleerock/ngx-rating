@@ -199,7 +199,7 @@ export class Rating implements OnInit, ControlValueAccessor, Validator {
     // -------------------------------------------------------------------------
 
     validate(c: Control) {
-        if (!c.value) {
+        if (this.required && !c.value) {
             return {
                 required: true
             };

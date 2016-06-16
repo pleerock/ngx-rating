@@ -1,8 +1,8 @@
 {
   "name": "ng2-rating",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple rating control for your angular2 applications using bootstrap3.",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "readmeFilename": "README.md",
   "private": true,
   "author": {
