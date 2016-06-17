@@ -246,7 +246,6 @@ export class Rating implements OnInit, ControlValueAccessor, Validator {
 
     setHovered(hovered: number): void {
         if (!this.readonly && !this.disabled) {
-            console.log(hovered);
             this.hovered = hovered;
             this.onHover.emit(hovered);
         }
