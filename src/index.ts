@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, Output, EventEmitter, HostListener, forwardRef, Provider} from "@angular/core";
-import {ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, Control, Validator} from "@angular/common";
+import {ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, Validator, AbstractControl} from "@angular/forms";
 
 @Component({
     selector: "rating",
@@ -198,7 +198,7 @@ export class Rating implements OnInit, ControlValueAccessor, Validator {
     // Implemented from Va..
     // -------------------------------------------------------------------------
 
-    validate(c: Control) {
+    validate(c: AbstractControl) {
         if (this.required && !c.value) {
             return {
                 required: true

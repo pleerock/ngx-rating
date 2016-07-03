@@ -1,6 +1,7 @@
 import {bootstrap} from "@angular/platform-browser-dynamic";
 import {Component} from "@angular/core";
 import {Rating} from "../../src/index";
+import {disableDeprecatedForms, provideForms} from "@angular/forms";
 
 @Component({
     selector: "app",
@@ -64,4 +65,7 @@ export class Sample1App {
 
 }
 
-bootstrap(Sample1App);
+bootstrap(Sample1App, [
+    disableDeprecatedForms(),
+    provideForms(),
+]);
