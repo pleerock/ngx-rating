@@ -254,7 +254,7 @@ export class Rating implements OnInit, ControlValueAccessor, Validator {
     changeHovered(event: MouseEvent): void {
         if (!this.float) return;
         const target = event.target as HTMLElement;
-        const relativeX = event.pageX - target.offsetLeft - 5;
+        const relativeX = event.pageX - target.offsetLeft;
         const percent = Math.round((relativeX * 100 / target.offsetWidth) / 10) * 10;
         this.hoveredPercent = percent > 50 ? 100 : 50;
     }

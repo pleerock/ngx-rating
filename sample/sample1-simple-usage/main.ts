@@ -55,6 +55,14 @@ import {disableDeprecatedForms, provideForms} from "@angular/forms";
     </rating>
     <br/><br/>
     
+    <!-- example in ngFor -->
+    <div *ngFor="let item of [1, 2, 3]; let index = index">
+        <rating [(ngModel)]="starsCounts[index]"
+                [float]="true">
+        </rating>
+        <br/><br/>
+    </div>
+
 </div>
 `,
     directives: [Rating]
@@ -62,6 +70,7 @@ import {disableDeprecatedForms, provideForms} from "@angular/forms";
 export class Sample1App {
 
     starsCount: number;
+    starsCounts: number[] = [];
 
 }
 
