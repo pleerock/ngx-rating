@@ -1,7 +1,8 @@
-import {bootstrap} from "@angular/platform-browser-dynamic";
-import {Component} from "@angular/core";
-import {Rating} from "../../src/index";
-import {disableDeprecatedForms, provideForms} from "@angular/forms";
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
+import {Component, NgModule} from "@angular/core";
+import {FormsModule} from "@angular/forms";
+import {RatingModule} from "../../src/index";
+import {BrowserModule} from "@angular/platform-browser";
 
 @Component({
     selector: "app",
@@ -64,8 +65,7 @@ import {disableDeprecatedForms, provideForms} from "@angular/forms";
     </div>
 
 </div>
-`,
-    directives: [Rating]
+`
 })
 export class Sample1App {
 
@@ -74,7 +74,21 @@ export class Sample1App {
 
 }
 
-bootstrap(Sample1App, [
-    disableDeprecatedForms(),
-    provideForms(),
-]);
+@NgModule({
+    imports: [
+        BrowserModule,
+        FormsModule,
+        RatingModule
+    ],
+    declarations: [
+        Sample1App
+    ],
+    bootstrap: [
+        Sample1App
+    ]
+})
+export class Sample1Module {
+
+}
+
+platformBrowserDynamic().bootstrapModule(Sample1Module);

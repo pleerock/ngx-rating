@@ -27,7 +27,7 @@ Please star a project if you liked it, or create an issue if you have problems w
 
 ## Usage
 
-Example of simple usage:
+Import `RatingModule` module in your app, and use a component in your html:
 
 ```html
 <rating [(ngModel)]="model.rating"
@@ -59,7 +59,7 @@ Example of simple usage:
 
 ```typescript
 import {Component} from "@angular/core";
-import {Rating} from "ng2-rating";
+import {RatingModule} from "ng2-rating";
 
 @Component({
     selector: "app",
@@ -120,6 +120,22 @@ import {Rating} from "ng2-rating";
 export class Sample1App {
 
     starsCount: number;
+
+}
+
+@NgModule({
+    imports: [
+        // ...
+        RatingModule
+    ],
+    declarations: [
+        App
+    ],
+    bootstrap: [
+        App
+    ]
+})
+export class AppModule {
 
 }
 ```

@@ -1,5 +1,6 @@
-import {Component, OnInit, Input, Output, EventEmitter, HostListener, forwardRef, Provider} from "@angular/core";
+import {Component, OnInit, Input, Output, EventEmitter, HostListener, forwardRef, NgModule} from "@angular/core";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, Validator, AbstractControl} from "@angular/forms";
+import {CommonModule} from "@angular/common";
 
 @Component({
     selector: "rating",
@@ -24,14 +25,8 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, Validator, Abstr
 </span>
 `,
     providers: [
-        new Provider(NG_VALUE_ACCESSOR, {
-            useExisting: forwardRef(() => Rating),
-            multi: true
-        }),
-        new Provider(NG_VALIDATORS, {
-            useExisting: forwardRef(() => Rating),
-            multi: true
-        })
+        { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => Rating), multi: true },
+        { provide: NG_VALIDATORS, useExisting: forwardRef(() => Rating), multi: true },
     ],
     styles: [`
 span.rating {
@@ -289,5 +284,20 @@ export class Rating implements OnInit, ControlValueAccessor, Validator {
         }
         return foo;
     }
+
+}
+
+@NgModule({
+    imports: [
+        CommonModule
+    ],
+    declarations: [
+        Rating,
+    ],
+    exports: [
+        Rating,
+    ],
+})
+export class RatingModule {
 
 }
