@@ -1,26 +1,26 @@
-# ng2-rating
+# ngx-rating
 
 Simple rating control for your angular2 applications using bootstrap3. Does not depend of jquery.
 If you want to use it without bootstrap - simply create proper css classes.
 Please star a project if you liked it, or create an issue if you have problems with it.
 
-![angular 2 rating](https://raw.githubusercontent.com/pleerock/ng2-rating/master/resources/rating-example.png)
+![angular 2 rating](https://raw.githubusercontent.com/pleerock/ngx-rating/master/resources/rating-example.png)
 
 ## Installation
 
 1. Install npm module:
 
-    `npm install ng2-rating --save`
+    `npm install ngx-rating --save`
 
 2. If you are using system.js you may want to add this into `map` and `package` config:
 
     ```json
     {
         "map": {
-            "ng2-rating": "node_modules/ng2-rating"
+            "ngx-rating": "node_modules/ngx-rating"
         },
         "packages": {
-            "ng2-rating": { "main": "index.js", "defaultExtension": "js" }
+            "ngx-rating": { "main": "index.js", "defaultExtension": "js" }
         }
     }
     ```
@@ -59,7 +59,7 @@ Import `RatingModule` module in your app, and use a component in your html:
 
 ```typescript
 import {Component} from "@angular/core";
-import {RatingModule} from "ng2-rating";
+import {RatingModule} from "ngx-rating";
 
 @Component({
     selector: "app",
@@ -140,5 +140,5 @@ export class AppModule {
 }
 ```
 
-Take a look on samples in [./sample](https://github.com/pleerock/ng2-rating/tree/master/sample) for more examples of
+Take a look on samples in [./sample](https://github.com/pleerock/ngx-rating/tree/master/sample) for more examples of
 usages.
