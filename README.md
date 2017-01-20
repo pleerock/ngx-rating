@@ -49,7 +49,7 @@ Import `RatingModule` module in your app, and use a component in your html:
     * `iconClass="string"` Css class to be used as an icon. Default is **star-icon**.
     * `fullIcon="string"` UTF character to be used as filled rating item. Default is **★**.
     * `emptyIcon="string"` UTF character to be used as empty rating item. Default is **☆**.
-    * `[readonly]="true|false"` Indicates if rating should be readonly. If rating is readonly then use cannot vote, only can see a result. Default is **false**
+    * `[readonly]="true|false"` Indicates if rating should be readonly. If rating is readonly, then the user cannot vote, only can see a result. Default is **false**
     * `[disabled]="true|false"` Indicates if rating should be disabled. If rating is disabled then it will not be shown. Default is **false**
     * `[required]="true|false"` Indicates if rating should be required. With this you can use ngForm and validation capabilities of angular 2. Default is **false**
     * `[float]="true|false"` If set to true then user can select half-of-star too. Default is **false**
