@@ -4,7 +4,7 @@ Simple rating control for your angular2 applications using bootstrap3. Does not 
 If you want to use it without bootstrap - simply create proper css classes.
 Please star a project if you liked it, or create an issue if you have problems with it.
 
-![angular 2 rating](https://raw.githubusercontent.com/pleerock/ngx-rating/master/resources/rating-example.png)
+![angular 2 rating](https://github.com/pleerock/ng2-rating/blob/master/resources/rating-example.png)
 
 ## Installation
 
