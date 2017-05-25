@@ -1,5 +1,4 @@
-> This repository is for demonstration purposes of how it can be implemented in Angular and is not maintaned.
-Please fork and maintain your own version of this repository.
+> This repository was forked from pleerock/ngx-rating currently in the process of updating for use in angular 4.1.0
 
 # ngx-rating
 
